@@ -199,8 +199,9 @@ const Exchange = () => {
         <Title>Change</Title>
         <InputWrap>
           <ExchangeValue
+            type="number"
             disabled={error ? true : false}
-            value={isLoading ? '--' : giveValue}
+            value={isLoading ? 0 : giveValue.toString()}
             onChange={handleGiveValue}
           />
           <Select
@@ -225,8 +226,9 @@ const Exchange = () => {
         <Title>Receive </Title>
         <InputWrap>
           <ExchangeValue
+            type="number"
             disabled={error ? true : false}
-            value={isLoading ? '--' : getValue}
+            value={isLoading ? 0 : getValue.toString()}
             onChange={handleGetValue}
           />
           <Select
